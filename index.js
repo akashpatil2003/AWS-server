@@ -8,6 +8,7 @@ import salaryRouter from './routes/salaryRoutes.js';
 import leaveRouter from './routes/leaveRoutes.js';
 import settingRouter from './routes/settingRoutes.js';
 import dashboardRouter from './routes/dashboardRouter.js';
+import attendanceRouter from './routes/attendanceRoutes.js';
 
 import dotenv from 'dotenv';
 dotenv.config();
@@ -23,6 +24,7 @@ app.use('/api/salary', salaryRouter);
 app.use('/api/leave', leaveRouter);
 app.use('/api/setting', settingRouter);
 app.use('/api/dashboard', dashboardRouter);
+app.use('/api/attendance', attendanceRouter);
 
 app.listen(process.env.PORT, async () => {
   await connectMongo();
